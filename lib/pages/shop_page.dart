@@ -14,7 +14,8 @@ class ShopPage extends StatelessWidget {
         title: const Text("Shop Page"),
         centerTitle: true,
       ),
-      drawer: MyDrawer(),
+      drawer: const MyDrawer(),
+      backgroundColor: Theme.of(context).colorScheme.background,
     );
   }
 }

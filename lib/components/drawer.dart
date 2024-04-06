@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fultter_e_commerce/components/my_listile.dart';
+import 'package:fultter_e_commerce/pages/intro_page.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
@@ -48,7 +49,13 @@ class MyDrawer extends StatelessWidget {
             child: MyListile(
               text: "Exit",
               icon: Icons.logout,
-              onTap: () {},
+              onTap: () => Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const IntroPage(),
+                ),
+                (route) => false,
+              ),
             ),
           ),
         ],
