@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:fultter_e_commerce/pages/cart_page.dart';
 import 'package:fultter_e_commerce/pages/intro_page.dart';
+import 'package:fultter_e_commerce/pages/shop_page.dart';
 import 'package:fultter_e_commerce/themes/light_mode.dart';
 
 void main() {
@@ -12,8 +14,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: const IntroPage(),
       theme: lightMode,
+      routes: {
+        '/intro_page': (context) => const IntroPage(),
+        '/shop_page': (context) => const ShopPage(),
+        '/cart_page': (context) => const CartPage(),
+      },
     );
   }
 }

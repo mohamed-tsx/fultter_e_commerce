@@ -14,7 +14,7 @@ class IntroPage extends StatelessWidget {
           children: [
             // Logo
             Icon(
-              Icons.shopping_bag_outlined,
+              Icons.shopping_bag,
               size: 72,
               color: Theme.of(context).colorScheme.inversePrimary,
             ),
@@ -47,7 +47,7 @@ class IntroPage extends StatelessWidget {
             ),
             // Button
             Button(
-              onTap: () {},
+              onTap: () => Navigator.pushNamed(context, '/shop_page'),
               child: const Icon(Icons.arrow_forward),
             ),
           ],
