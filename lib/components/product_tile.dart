@@ -12,6 +12,10 @@ class ProductTile extends StatelessWidget {
         // Product image
         Icon(Icons.favorite),
 
+        const SizedBox(
+          height: 10,
+        ),
+
         // Product name
         Text(product.name),
 
